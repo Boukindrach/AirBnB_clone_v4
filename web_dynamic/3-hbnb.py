@@ -8,7 +8,7 @@ from uuid import uuid4
 
 app = Flask(name)
 
-@app.route('/0-hbnb/', strict_slashes=False)
+@app.route('/3-hbnb/', strict_slashes=False)
 def hbnb():
     """
     Renders the main HBnB filters page
@@ -17,7 +17,7 @@ def hbnb():
     amenities = storage.all("Amenity").values()
     places = storage.all("Place").values()
     cache_id = uuid4()
-    return render_template('0-hbnb.html', 
+    return render_template('3-hbnb.html', 
                            states=states, 
                            amenities=amenities, 
                            places=places, 
